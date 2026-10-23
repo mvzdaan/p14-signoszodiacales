@@ -1,46 +1,117 @@
 
-        /* style.css */
-
+        /* DISEÑO GENERAL */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1b1035, #39245c, #15152e);
-    color: #ffffff;
-    padding: 30px;
+    margin: 0;
+    padding: 25px 15px;
+    font-family: Georgia, serif;
+    color: #f5eaff;
+    text-align: center;
+    background:
+        radial-gradient(circle at top, #39235f, transparent 45%),
+        linear-gradient(135deg, #090d25, #17102e, #0a1630);
+}
+
+/* TITULO PRINCIPAL */
+h1 {
+    color: #f5d78e;
+    font-size: 36px;
+    text-align: center;
+    margin: 20px auto;
+    text-shadow: 0 0 15px #a77bff;
+}
+
+h1::before {
+    content: "✦ ";
+}
+
+h1::after {
+    content: " ✦";
+}
+
+h2 {
+    color: #e5c7ff;
+    margin: 35px 0 20px;
+}
+
+/* LISTA DE LOS SIGNOS */
+ol {
+    list-style-position: inside;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
     text-align: center;
 }
 
-h1 {
-    color: #f5d780;
-    font-size: 36px;
-    margin-bottom: 30px;
-    text-shadow: 0 0 10px #b99aff;
-}
-
-ol {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 25px 25px 25px 60px;
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid #b99aff;
-    border-radius: 15px;
-    text-align: left;
-}
-
-li {
-    padding: 12px;
+ol li {
+    padding: 10px;
     margin: 8px 0;
-    background-color: rgba(185, 154, 255, 0.12);
-    border-radius: 8px;
-    font-size: 18px;
-    transition: 0.3s;
+    color: #f5d78e;
+    background-color: #ffffff10;
+    border: 1px solid #b99aff55;
+    border-radius: 12px;
 }
 
-li:hover {
-    background-color: #6c4c9b;
-    color: #ffe}
+/* TARJETAS ZODIACALES */
+.signo {
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+    min-height: 340px;
+    margin: 12px;
+    padding: 20px;
+    background: linear-gradient(160deg, #282044, #11172f);
+    border: 1px solid #b99aff;
+    border-radius: 18px;
+    box-shadow: 0 0 15px #8a5bd533;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.signo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 22px #b99aff77;
+}
+
+/* NOMBRES DE LOS SIGNOS */
+.signo h3 {
+    color: #f5d78e;
+    font-size: 23px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* IMAGENES */
+.signo img {
+    display: block;
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    margin: 15px auto;
+    border-radius: 50%;
+    border: 2px solid #e2c17c;
+    background-color: #ffffff08;
+}
+
+/* DESCRIPCIONES */
+.signo p {
+    color: #e5def4;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* PANTALLAS PEQUEÑAS */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .signo {
+        width: 90%;
+        max-width: 320px;
+        margin: 12px auto;
+    }
+}
